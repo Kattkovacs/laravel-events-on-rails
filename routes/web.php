@@ -19,10 +19,10 @@ Route::get('/', function () {
 
 Route::get('/trains', function () {
     // get data from db
-    $train = [
-        'type' => 'steam houled',
-        'catering' => 'on diner',
-        'passengers' => 120
+    $trains = [
+        ['type' => 'steam houled', 'catering' => 'on diner', 'passengers' => 120],
+        ['type' => 'steam houled', 'catering' => 'no catering', 'passengers' => 250],
+        ['type' => 'steam houled', 'catering' => 'on diner', 'passengers' => 80]
     ];
-    return view('trains', $train);
+    return view('trains', ['trains' => $trains]);
 });

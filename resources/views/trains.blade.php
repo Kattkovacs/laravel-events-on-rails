@@ -78,10 +78,19 @@
         Train List
       </div>
       <div class="text m-b-md">
-        {{ $type }} - {{ $catering }} - {{ $passengers }}
+
+      {{-- @for ($i = 0; $i < count($trains); $i++)
+        <p>{{ $trains[$i]['type'] }}</p>          
+      @endfor --}}
+
+      @foreach ($trains as $train)
+        <div>
+          {{ $loop->index }} {{ $train['type'] }} - {{ $train['catering'] }}
+        </div>
+      @endforeach
       </div>
 
-      @if($passengers > 100)
+      {{-- @if($passengers > 100)
         <p>this train needs more than 3 cars</p>
       @elseif($passengers < 30) 
         <p>you may need a DMU</p>
@@ -91,10 +100,11 @@
 
       @unless ($catering == 'on diner')
         <p>please contact for menu and sitting</p>
-      @endunless
+      @endunless  --}}
 
       @php
         echo 'welcome on board'; 
+        // print_r($trains);
       @endphp
 
     </div>
