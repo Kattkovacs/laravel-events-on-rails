@@ -77,7 +77,9 @@
       <div class="title m-b-md">
         Train List
       </div>
-      <p>{{ $type }}</p>
+      <div class="text m-b-md">
+        {{ $type }} - {{ $catering }} - {{ $passengers }}
+      </div>
     </div>
   </div>
 </body>
