@@ -80,6 +80,23 @@
       <div class="text m-b-md">
         {{ $type }} - {{ $catering }} - {{ $passengers }}
       </div>
+
+      @if($passengers > 100)
+        <p>this train needs more than 3 cars</p>
+      @elseif($passengers < 30) 
+        <p>you may need a DMU</p>
+      @else
+        <p>this train will contain 3 cars</p>
+      @endif
+
+      @unless ($catering == 'on diner')
+        <p>please contact for menu and sitting</p>
+      @endunless
+
+      @php
+        echo 'welcome on board'; 
+      @endphp
+
     </div>
   </div>
 </body>
