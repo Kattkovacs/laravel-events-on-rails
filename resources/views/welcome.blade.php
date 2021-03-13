@@ -17,21 +17,12 @@
     @endif
 
     <div class="content">
+        <img src="/img/ticket-transparent-png.png" alt="ticket logo">
         <div class="title m-b-md">
             Events on Rails<br />
         </div>
         <div class="text m-b-md">
             Find the best solution for your dream train event
-        </div>
-        <div class="links">
-            <a href="https://laravel.com/docs">Docs</a>
-            <a href="https://laracasts.com">Laracasts</a>
-            <a href="https://laravel-news.com">News</a>
-            <a href="https://blog.laravel.com">Blog</a>
-            <a href="https://nova.laravel.com">Nova</a>
-            <a href="https://forge.laravel.com">Forge</a>
-            <a href="https://vapor.laravel.com">Vapor</a>
-            <a href="https://github.com/laravel/laravel">GitHub</a>
         </div>
     </div>
 </div>
