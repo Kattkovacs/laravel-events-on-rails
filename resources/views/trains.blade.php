@@ -7,6 +7,8 @@
     <div class="title m-b-md">
       Train List
     </div>
+    <p>{{ $name }}</p>
+    <p>{{ $age }}</p>
     <div class="text m-b-md">
     @foreach ($trains as $train)
       <div>

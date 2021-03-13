@@ -24,5 +24,12 @@ Route::get('/trains', function () {
         ['type' => 'steam houled', 'catering' => 'no catering', 'passengers' => 250],
         ['type' => 'steam houled', 'catering' => 'on diner', 'passengers' => 80]
     ];
-    return view('trains', ['trains' => $trains]);
+
+    $name = request('name');
+
+    return view('trains', [
+        'trains' => $trains,
+        'name' => $name,
+        'age' => request('age')
+    ]);
 });
