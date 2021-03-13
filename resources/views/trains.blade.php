@@ -86,6 +86,12 @@
       @foreach ($trains as $train)
         <div>
           {{ $loop->index }} {{ $train['type'] }} - {{ $train['catering'] }}
+          @if($loop->first)
+            <span> - first in the loop</span>
+          @endif
+          @if($loop->last)
+            <span> - last in the loop</span>
+          @endif
         </div>
       @endforeach
       </div>
