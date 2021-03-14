@@ -1,13 +1,10 @@
 @extends('layouts.layout')
 
 @section('content')
-<div class="flex-center position-ref full-height">
-
-  <div class="content">
-    <div class="title m-b-md">
-      Train - {{ $id }}
-    </div>
-  </div>
-
+<div class="wrapper train-details">
+  <h1>Order for {{ $train->name }}</h1>
+  <p class="type">Type - {{ $train->type }}</p>
+  <p class="catering">Catering - {{ $train->catering }}</p>
 </div>
+<a href="/trains" class="back"><-Back to all trains</a>
 @endsection
