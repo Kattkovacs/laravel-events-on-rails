@@ -3,7 +3,8 @@
 @section('content')
 <div class="wrapper create-train">
   <h1>Create a New Train</h1>
-  <form action="/trains" methods="POST">
+  <form action="/trains" method="POST">
+    @csrf
     <label for="name">Your name:</label>
     <input type="text" id="name" name="name">
     <label for="type">Choose train type:</label>
@@ -19,6 +20,13 @@
       <option value="drinks only">Drinks only</option>
       <option value="no catering">No Catering</option>
     </select>
+    <fieldset>
+      <label>Cars:</label>
+      <input type="checkbox" name="cars[]" value="WR2347"><br/>
+      <input type="checkbox" name="cars[]" value="WR4252"><br/>
+      <input type="checkbox" name="cars[]" value="ABak"><br/>
+      <input type="checkbox" name="cars[]" value="ABaü630"><br/>
+    </fieldset>
     <input type="submit" value="Order Train">
   </form>
 </div>

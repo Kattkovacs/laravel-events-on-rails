@@ -29,4 +29,18 @@ class TrainController extends Controller
     {
         return view('trains.create');
     }
+
+    public function store()
+    {
+        $train = new Train();
+
+        $train->name = request('name');
+        $train->type = request('type');
+        $train->catering = request('catering');
+        $train->cars = request('cars');
+
+        $train->save();
+
+        return redirect('/')->with('mssg', 'Thanks for your order');
+    }
 }

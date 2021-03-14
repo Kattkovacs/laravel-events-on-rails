@@ -16,9 +16,10 @@ class CreateTrainsTable extends Migration
         Schema::create('trains', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('name');
             $table->string('type');
             $table->string('catering');
-            $table->integer('passengers');
+            $table->json('cars');
             // there is a safer option for new column (new migration file)
             // $table->integer('passengers');
         });

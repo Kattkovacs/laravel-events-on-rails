@@ -26,4 +26,6 @@ Route::get('/trains', [TrainController::class, 'index']);
 
 Route::get('/trains/create', [TrainController::class, 'create']);
 
+Route::post('/trains', [TrainController::class, 'store']);
+
 Route::get('/trains/{id}', [TrainController::class, 'show']);
