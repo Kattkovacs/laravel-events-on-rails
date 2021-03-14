@@ -24,7 +24,6 @@ Route::get('/', function () {
 // in this version
 Route::get('/trains', [TrainController::class, 'index']);
 
-// earlier Laravel versions
-//Route::get('/trains/{id}', 'TrainController@show');
-// in this version
+Route::get('/trains/create', [TrainController::class, 'create']);
+
 Route::get('/trains/{id}', [TrainController::class, 'show']);

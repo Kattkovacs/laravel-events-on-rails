@@ -14,13 +14,18 @@ class TrainController extends Controller
         // $trains = Train::where('type', 'steam-powered')->get();
         $trains = Train::latest()->get();
 
-        return view('trains', [
+        return view('trains.index', [
             'trains' => $trains
         ]);
     }
 
     public function show($id)
     {
-        return view('details', ['id' => $id]);
+        return view('trains.show', ['id' => $id]);
+    }
+
+    public function create()
+    {
+        return view('trains.create');
     }
 }
