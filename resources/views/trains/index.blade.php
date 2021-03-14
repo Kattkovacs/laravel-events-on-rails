@@ -12,7 +12,7 @@
 
     @foreach ($trains as $train)
       <div>
-        {{ $train->type }} - {{ $train->catering }} - {{ $train->passengers }}
+        {{ $train->name }} - {{ $train->type }} - {{ $train->catering }}
       </div>
     @endforeach
 

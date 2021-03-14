@@ -21,11 +21,11 @@
       <option value="no catering">No Catering</option>
     </select>
     <fieldset>
-      <label>Cars:</label>
-      <input type="checkbox" name="cars[]" value="WR2347"><br/>
-      <input type="checkbox" name="cars[]" value="WR4252"><br/>
-      <input type="checkbox" name="cars[]" value="ABak"><br/>
-      <input type="checkbox" name="cars[]" value="ABaü630"><br/>
+      <label>Cars:</label><br/>
+      <input type="checkbox" name="cars[]" value="WR2347">WR2347<br/>
+      <input type="checkbox" name="cars[]" value="WR4252">WR4252<br/>
+      <input type="checkbox" name="cars[]" value="ABak">ABak<br/>
+      <input type="checkbox" name="cars[]" value="ABaü630">ABaü630<br/>
     </fieldset>
     <input type="submit" value="Order Train">
   </form>
