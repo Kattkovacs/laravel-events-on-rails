@@ -31,3 +31,7 @@ Route::post('/trains', [TrainController::class, 'store']);
 Route::get('/trains/{id}', [TrainController::class, 'show']);
 
 Route::delete('/trains/{id}', [TrainController::class, 'destroy']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
