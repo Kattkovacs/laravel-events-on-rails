@@ -43,4 +43,12 @@ class TrainController extends Controller
 
         return redirect('/')->with('mssg', 'Thanks for your order');
     }
+
+    public function destroy($id)
+    {
+        $train = Train::findOrFail($id);
+        $train->delete();
+
+        return redirect('/trains');
+    }
 }

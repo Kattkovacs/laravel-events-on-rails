@@ -11,6 +11,11 @@
         <li>{{ $car }}</li>
     @endforeach
   </ul>
+  <form action="/trains/{{ $train->id }}" method="POST">
+    @csrf
+    @method('DELETE')
+    <button>Complete Order</button>
+  </form>
 </div>
 <a href="/trains" class="back"><-Back to all trains</a>
 @endsection
