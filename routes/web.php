@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\TrainController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,24 +19,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/trains', function () {
-    // get data from db
-    $trains = [
-        ['type' => 'steam houled', 'catering' => 'on diner', 'passengers' => 120],
-        ['type' => 'steam houled', 'catering' => 'no catering', 'passengers' => 250],
-        ['type' => 'steam houled', 'catering' => 'on diner', 'passengers' => 80]
-    ];
+// earlier Laravel versions
+//Route::get('/trains', 'TrainController@index');
+// in this version
+Route::get('/trains', [TrainController::class, 'index']);
 
-    $name = request('name');
-
-    return view('trains', [
-        'trains' => $trains,
-        'name' => $name,
-        'age' => request('age')
-    ]);
-});
-
-Route::get('/trains/{id}', function ($id) {
-    // use the $id variable to query the db for a record
-    return view('details', ['id' => $id]);
-});
+// earlier Laravel versions
+//Route::get('/trains/{id}', 'TrainController@show');
+// in this version
+Route::get('/trains/{id}', [TrainController::class, 'show']);
