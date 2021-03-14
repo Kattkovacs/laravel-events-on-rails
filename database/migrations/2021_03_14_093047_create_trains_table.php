@@ -19,6 +19,8 @@ class CreateTrainsTable extends Migration
             $table->string('type');
             $table->string('catering');
             $table->integer('passengers');
+            // there is a safer option for new column (new migration file)
+            // $table->integer('passengers');
         });
     }
 
