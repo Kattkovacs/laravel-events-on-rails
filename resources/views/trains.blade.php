@@ -7,20 +7,15 @@
     <div class="title m-b-md">
       Train List
     </div>
-    <p>{{ $name }}</p>
-    <p>{{ $age }}</p>
+
     <div class="text m-b-md">
+
     @foreach ($trains as $train)
       <div>
-        {{ $loop->index }} {{ $train['type'] }} - {{ $train['catering'] }}
-        @if($loop->first)
-          <span> - first in the loop</span>
-        @endif
-        @if($loop->last)
-          <span> - last in the loop</span>
-        @endif
+        {{ $train->type }} - {{ $train->catering }} - {{ $train->passengers }}
       </div>
     @endforeach
+
     </div>
 
     @php

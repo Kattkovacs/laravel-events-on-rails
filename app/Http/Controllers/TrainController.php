@@ -2,24 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Train;
 use Illuminate\Http\Request;
 
 class TrainController extends Controller
 {
     public function index()
     {
-        $trains = [
-            ['type' => 'steam houled', 'catering' => 'on diner', 'passengers' => 120],
-            ['type' => 'diesel houled', 'catering' => 'no catering', 'passengers' => 250],
-            ['type' => 'steam houled', 'catering' => 'on diner', 'passengers' => 80]
-        ];
-
-        $name = request('name');
+        // $trains = Train::all();
+        // $trains = Train::orderBy('type')->get();
+        // $trains = Train::where('type', 'steam-powered')->get();
+        $trains = Train::latest()->get();
 
         return view('trains', [
-            'trains' => $trains,
-            'name' => $name,
-            'age' => request('age')
+            'trains' => $trains
         ]);
     }
 
