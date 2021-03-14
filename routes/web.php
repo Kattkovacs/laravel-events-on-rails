@@ -22,15 +22,15 @@ Route::get('/', function () {
 // earlier Laravel versions
 //Route::get('/trains', 'TrainController@index');
 // in this version
-Route::get('/trains', [TrainController::class, 'index']);
+Route::get('/trains', [TrainController::class, 'index'])->middleware('auth');
 
 Route::get('/trains/create', [TrainController::class, 'create']);
 
 Route::post('/trains', [TrainController::class, 'store']);
 
-Route::get('/trains/{id}', [TrainController::class, 'show']);
+Route::get('/trains/{id}', [TrainController::class, 'show'])->middleware('auth');
 
-Route::delete('/trains/{id}', [TrainController::class, 'destroy']);
+Route::delete('/trains/{id}', [TrainController::class, 'destroy'])->middleware('auth');
 
 Auth::routes();
 
