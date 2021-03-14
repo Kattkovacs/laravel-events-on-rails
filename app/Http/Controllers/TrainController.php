@@ -10,7 +10,7 @@ class TrainController extends Controller
     {
         $trains = [
             ['type' => 'steam houled', 'catering' => 'on diner', 'passengers' => 120],
-            ['type' => 'steam houled', 'catering' => 'no catering', 'passengers' => 250],
+            ['type' => 'diesel houled', 'catering' => 'no catering', 'passengers' => 250],
             ['type' => 'steam houled', 'catering' => 'on diner', 'passengers' => 80]
         ];
 
