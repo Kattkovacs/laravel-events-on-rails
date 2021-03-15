@@ -11,7 +11,7 @@
         <li>{{ $car }}</li>
     @endforeach
   </ul>
-  <form action="/trains/{{ $train->id }}" method="POST">
+  <form action="{{ route('trains.destroy'), $train->id }}" method="POST">
     @csrf
     @method('DELETE')
     <button>Complete Order</button>

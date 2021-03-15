@@ -24,7 +24,7 @@
         <div class="text m-b-md">
             Find the best solution for your dream train event
         </div>
-        <a href="/trains/create">Order a Train</a>
+        <a href="{{ route('trains.create') }}">Order a Train</a>
     </div>
 </div>
 @endsection

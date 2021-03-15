@@ -22,16 +22,21 @@ Route::get('/', function () {
 // earlier Laravel versions
 //Route::get('/trains', 'TrainController@index');
 // in this version
-Route::get('/trains', [TrainController::class, 'index'])->middleware('auth');
+Route::get('/trains', [TrainController::class, 'index'])->name('trains.index')->middleware('auth');
 
-Route::get('/trains/create', [TrainController::class, 'create']);
+Route::get('/trains/create', [TrainController::class, 'create'])->name('trains.create');
 
-Route::post('/trains', [TrainController::class, 'store']);
+Route::post('/trains', [TrainController::class, 'store'])->name('trains.store');
 
-Route::get('/trains/{id}', [TrainController::class, 'show'])->middleware('auth');
+Route::get('/trains/{id}', [TrainController::class, 'show'])->middleware('auth')->name('trains.show');
 
-Route::delete('/trains/{id}', [TrainController::class, 'destroy'])->middleware('auth');
+Route::delete('/trains/{id}', [TrainController::class, 'destroy'])->middleware('auth')->name('trains.destroy');
 
-Auth::routes();
+Auth::routes(
+    // [
+    // // desible register
+    // 'register' => false
+    // ]
+);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
